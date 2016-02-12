@@ -37,14 +37,17 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8c-q0-oQw" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="8" y="55" width="304" height="135"/>
+                                <rect key="frame" x="8" y="55" width="304" height="200"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="IYx-a7-ZfN"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="calendarDelegate" destination="BYZ-38-t0r" id="6aB-FM-9hL"/>
                                 </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MainTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ADy-Ac-rSY">
-                                <rect key="frame" x="8" y="190" width="304" height="260"/>
+                                <rect key="frame" x="8" y="255" width="304" height="195"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -79,7 +82,7 @@
                                 </connections>
                             </tableView>
                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeU-LC-JuG" userLabel="StartUserView">
-                                <rect key="frame" x="40" y="210" width="240" height="210"/>
+                                <rect key="frame" x="40" y="220" width="240" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYp-AX-TEO">
                                         <rect key="frame" x="8" y="160" width="96" height="30"/>
@@ -173,9 +176,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QQ2-jf-W2c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="15" id="3ml-YI-ul7"/>
+                            <constraint firstItem="QQ2-jf-W2c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" priority="750" constant="15" id="3ml-YI-ul7"/>
                             <constraint firstAttribute="trailing" secondItem="HeU-LC-JuG" secondAttribute="trailing" constant="40" id="4wx-Ky-hOB"/>
                             <constraint firstItem="Crp-yp-U9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Gz-gN-2F5"/>
+                            <constraint firstItem="HeU-LC-JuG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="CcP-EM-04k"/>
                             <constraint firstItem="Crp-yp-U9j" firstAttribute="top" secondItem="ADy-Ac-rSY" secondAttribute="bottom" id="Dsl-10-8zZ"/>
                             <constraint firstItem="B8c-q0-oQw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="GE4-2r-KqP"/>
                             <constraint firstAttribute="bottom" secondItem="Crp-yp-U9j" secondAttribute="bottom" id="IDb-ne-Re5"/>
@@ -185,6 +189,7 @@
                             <constraint firstAttribute="trailing" secondItem="B8c-q0-oQw" secondAttribute="trailing" constant="8" id="NE6-gi-QGH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ADy-Ac-rSY" secondAttribute="bottom" constant="30" id="Pxe-Sb-TxJ"/>
                             <constraint firstItem="CnE-tf-f5Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="SEc-mZ-yeT"/>
+                            <constraint firstItem="tgy-cY-PQd" firstAttribute="top" secondItem="HeU-LC-JuG" secondAttribute="bottom" constant="20" id="TI7-zV-x0F"/>
                             <constraint firstItem="tgy-cY-PQd" firstAttribute="leading" secondItem="Crp-yp-U9j" secondAttribute="trailing" id="Yj9-Wj-3bQ"/>
                             <constraint firstAttribute="trailing" secondItem="tgy-cY-PQd" secondAttribute="trailing" id="c59-1L-2Uz"/>
                             <constraint firstItem="ADy-Ac-rSY" firstAttribute="top" secondItem="B8c-q0-oQw" secondAttribute="bottom" id="c5s-5b-6uj"/>
@@ -192,14 +197,17 @@
                             <constraint firstAttribute="trailing" secondItem="CnE-tf-f5Z" secondAttribute="trailing" constant="8" id="fw6-Gf-lwt"/>
                             <constraint firstItem="tgy-cY-PQd" firstAttribute="height" secondItem="Crp-yp-U9j" secondAttribute="height" id="gWF-Be-Sxg"/>
                             <constraint firstItem="HeU-LC-JuG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="iCQ-kn-Lvb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HeU-LC-JuG" secondAttribute="bottom" constant="60" id="kYp-oT-Jy7"/>
                             <constraint firstItem="tgy-cY-PQd" firstAttribute="width" secondItem="Crp-yp-U9j" secondAttribute="width" id="mVN-T6-Aqx"/>
                             <constraint firstItem="QQ2-jf-W2c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="tFf-hS-POa"/>
                             <constraint firstItem="CnE-tf-f5Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="uP3-b5-OAg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tgy-cY-PQd" secondAttribute="bottom" id="xDF-GG-7jI"/>
-                            <constraint firstItem="HeU-LC-JuG" firstAttribute="top" secondItem="B8c-q0-oQw" secondAttribute="bottom" constant="20" id="zDh-jf-bhV"/>
                             <constraint firstAttribute="trailing" secondItem="QQ2-jf-W2c" secondAttribute="trailing" constant="8" id="zYB-2D-YNW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CcP-EM-04k"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -208,6 +216,7 @@
                         <outlet property="TableView" destination="ADy-Ac-rSY" id="WbY-gT-Di7"/>
                         <outlet property="UserName" destination="yBP-CO-Qql" id="pNP-Nj-d1W"/>
                         <outlet property="calendarView" destination="B8c-q0-oQw" id="yfi-hH-RxY"/>
+                        <outlet property="loginViewBottomSpaceConstraint" destination="TI7-zV-x0F" id="jXp-i2-SBh"/>
                         <outlet property="menuView" destination="CnE-tf-f5Z" id="1zz-vb-37K"/>
                         <outlet property="monthLabel" destination="QQ2-jf-W2c" id="Wr9-Iq-rvf"/>
                     </connections>

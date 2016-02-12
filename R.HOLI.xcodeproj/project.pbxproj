@@ -548,7 +548,7 @@
 				);
 				INFOPLIST_FILE = CocoaPodsTest_10_18/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beyondconfidentlabs.CocoaPodsTest3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beyondconfidentlabs.CocoaPodsTest;
 				PRODUCT_NAME = R.HOLI;
 				PROVISIONING_PROFILE = "";
 			};
@@ -568,7 +568,7 @@
 				);
 				INFOPLIST_FILE = CocoaPodsTest_10_18/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beyondconfidentlabs.CocoaPodsTest3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beyondconfidentlabs.CocoaPodsTest;
 				PRODUCT_NAME = R.HOLI;
 				PROVISIONING_PROFILE = "";
 			};

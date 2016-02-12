@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var UserName: UITextField!
     @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var loginViewBottomSpaceConstraint: NSLayoutConstraint!
     
     lazy var images: [UIImage] = []
     lazy var imageObjects: [PFObject] = []
@@ -113,7 +114,24 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         //testObject["foo"] = "barr"
         //testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
         // print("Object has been saved.")
-            
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
+    }
+    
+    func keyboardWillShow(notification:NSNotification) {
+        loginViewBottomSpaceConstraint.constant = 200
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.view.setNeedsLayout()
+        }
+    }
+    
+    func keyboardWillHide(notification:NSNotification) {
+        loginViewBottomSpaceConstraint.constant = 20
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.view.setNeedsLayout()
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

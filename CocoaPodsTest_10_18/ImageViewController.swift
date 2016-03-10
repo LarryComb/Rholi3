@@ -14,7 +14,9 @@ protocol ImageViewControllerDelegate: class {
     func imageViewControllerDidPressBackButton(controller: ImageViewController)
     func imageViewControllerDidPressLikeButton(controller: ImageViewController)
     
+    
 }
+
 
 class ImageViewController: UIViewController {
     
@@ -53,6 +55,7 @@ class ImageViewController: UIViewController {
     
      func didPressBackButton(sender: AnyObject) {
         delegate?.imageViewControllerDidPressBackButton(self)
+        
     }
     
     override func viewDidAppear(animated: Bool){
@@ -60,10 +63,10 @@ class ImageViewController: UIViewController {
         
     
     
-        likeButton = UIButton(frame: CGRectMake(50, 50, 450, 1000))
+        likeButton = UIButton(frame: CGRectMake(50, 60, 450, 1000))
         likeButton.setImage(UIImage(named: "LikeButton"), forState: .Normal)
         likeButton.setTitle("LIKED", forState: .Highlighted)
-        likeButton.addTarget(self, action: "didPressLoveButton:", forControlEvents: .TouchUpInside)
+        likeButton.addTarget(self, action: "didPressLikeButton:", forControlEvents: .TouchUpInside)
         self.view.addSubview(likeButton)
         if counterNumber > 0 {
             likeButton.setTitle("LOVED \(counterNumber)", forState: UIControlState.Normal)
@@ -79,7 +82,7 @@ class ImageViewController: UIViewController {
             object?.saveInBackground()
         
         likeButton.setTitle("LOVED \(counterNumber)", forState: UIControlState.Normal)
-        delegate?.imageViewControllerDidPressBackButton(self)
+        delegate?.imageViewControllerDidPressLikeButton(self)
     }
     
     

@@ -65,7 +65,7 @@ class ImageViewController: UIViewController {
     
         likeButton = UIButton(frame: CGRectMake(50, 60, 450, 1000))
         likeButton.setImage(UIImage(named: "LikeButton"), forState: .Normal)
-        likeButton.setTitle("LIKED", forState: .Highlighted)
+        likeButton.setTitle("LOVED", forState: .Highlighted)
         likeButton.addTarget(self, action: "didPressLikeButton:", forControlEvents: .TouchUpInside)
         self.view.addSubview(likeButton)
         if counterNumber > 0 {

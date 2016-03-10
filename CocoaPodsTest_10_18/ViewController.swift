@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         super.viewDidLoad()
         
         self.navigationController?.navigationBarHidden = true
-        TableView.userInteractionEnabled = false
+        TableView.userInteractionEnabled = PFUser.currentUser() != nil
         
         monthLabel.text = CVDate(date: NSDate()).globalDescription
         
@@ -281,6 +281,7 @@ extension ViewController: UITableViewDelegate{
         
         let viewController = ImageViewController(nibName: nil, bundle: nil)
         viewController.image = image
+        viewController.object = self.imageObjects[indexPath.row]
         viewController.delegate = self
         
         
@@ -293,6 +294,10 @@ extension ViewController: ImageViewControllerDelegate {
     
     func imageViewControllerDidPressBackButton(controller: ImageViewController) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imageViewControllerDidPressLikeButton(controller: ImageViewController) {
+        
     }
     
 }

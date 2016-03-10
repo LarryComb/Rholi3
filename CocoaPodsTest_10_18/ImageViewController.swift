@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Parse
 
 protocol ImageViewControllerDelegate: class {
     
     func imageViewControllerDidPressBackButton(controller: ImageViewController)
+    func imageViewControllerDidPressLikeButton(controller: ImageViewController)
     
 }
 
@@ -49,17 +51,17 @@ class ImageViewController: UIViewController {
         
     }
     
-    func didPressBackButton(sender: AnyObject) {
+     func didPressBackButton(sender: AnyObject) {
         delegate?.imageViewControllerDidPressBackButton(self)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool){
         super.viewDidAppear(animated)
         
     
     
         likeButton = UIButton(frame: CGRectMake(50, 50, 450, 1000))
-        likeButton.setImage(UIImage(named: "like"), forState: .Normal)
+        likeButton.setImage(UIImage(named: "LikeButton"), forState: .Normal)
         likeButton.setTitle("LIKED", forState: .Highlighted)
         likeButton.addTarget(self, action: "didPressLoveButton:", forControlEvents: .TouchUpInside)
         self.view.addSubview(likeButton)

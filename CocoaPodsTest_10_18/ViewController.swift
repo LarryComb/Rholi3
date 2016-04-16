@@ -75,6 +75,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         let imageQuery = PFQuery(className: "Image")
         let date = NSDate(timeIntervalSinceNow: 86400000 * -1)
         imageQuery.whereKey("createdAt", greaterThanOrEqualTo: date)
+        
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: "swiped:")
+        swipeGesture.direction = .Left
+        TableView.addGestureRecognizer(swipeGesture)
     
         imageQuery.findObjectsInBackgroundWithBlock { [weak self] (imageObjects, error) -> Void in
             
@@ -118,6 +122,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
+    }
+    
+    func swiped(gesture:UISwipeGestureRecognizer) {
+        self.performSegueWithIdentifier("CollectionViewControllerSegue", sender: nil)
     }
     
     func keyboardWillShow(notification:NSNotification) {
@@ -681,5 +689,6 @@ extension ViewController {
         
         print("Showing Month: \(components.month)")
     }
-
+   
+    
 }

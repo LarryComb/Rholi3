@@ -31,6 +31,7 @@
 		A00B83CC1C14BAAF00C66C89 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B83CA1C14BAAF00C66C89 /* ImageViewController.swift */; };
 		A0C7ED421C120F98005FDC86 /* CameraViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7ED411C120F98005FDC86 /* CameraViewCell.swift */; };
 		DB953A2CB1B8A666B8D2A512 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438B1DF276902B24B7A7E8C5 /* Pods.framework */; };
+		E2F845AF1CB9807600435CB9 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F845AE1CB9807600435CB9 /* PhotosCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A00B83CA1C14BAAF00C66C89 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		A0C7ED411C120F98005FDC86 /* CameraViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewCell.swift; sourceTree = "<group>"; };
 		D94D6CD473C4781FFD0CC4D1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E2F845AE1CB9807600435CB9 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				A008CC2E1BD4712200DFFFFA /* Assets.xcassets */,
 				A008CC301BD4712200DFFFFA /* LaunchScreen.storyboard */,
 				A008CC331BD4712300DFFFFA /* Info.plist */,
+				E2F845AE1CB9807600435CB9 /* PhotosCollectionViewController.swift */,
 			);
 			path = CocoaPodsTest_10_18;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				466274431C052DE300FE789B /* TableLogInViewController.swift in Sources */,
 				A008CC2A1BD4712200DFFFFA /* ViewController.swift in Sources */,
 				A00B83CC1C14BAAF00C66C89 /* ImageViewController.swift in Sources */,
+				E2F845AF1CB9807600435CB9 /* PhotosCollectionViewController.swift in Sources */,
 				A008CC281BD4712200DFFFFA /* AppDelegate.swift in Sources */,
 				A0C7ED421C120F98005FDC86 /* CameraViewCell.swift in Sources */,
 			);
